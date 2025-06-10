@@ -11,7 +11,7 @@
   ],
   "require": {
     "php": ">=8.3",
-    "drupal/core": ">=11.0",
+    "drupal/core": "^11.0",
     "rumenx/php-vcard": "^1.0"
   },
   "require-dev": {
