@@ -3,22 +3,42 @@
 [![CI](https://github.com/RumenDamyanov/drupal_vcard/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/RumenDamyanov/drupal_vcard/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/RumenDamyanov/drupal_vcard/branch/master/graph/badge.svg)](https://codecov.io/gh/RumenDamyanov/drupal_vcard)
 
-A simple Drupal 11+ module to generate vCards using [`rumenx/php-vcard`](https://github.com/RumenDamyanov/php-vcard). Supports PHP 8.3+.
-
 ## Features
+
 - Provides a service for generating vCards in Drupal.
 - 100% PHPUnit unit test coverage.
 - Composer-managed dependencies.
 
 ## Installation
 
-```
+### Composer (Recommended)
+
+```bash
 composer require rumenx/drupal_vcard
 ```
+
 Enable the module in Drupal admin or via Drush:
-```
+
+```bash
 drush en drupal_vcard
 ```
+
+### Manual Installation
+
+1. Download or clone this repository:
+   - Download the ZIP from GitHub and extract it, or run:
+
+     ```bash
+     git clone https://github.com/RumenDamyanov/drupal_vcard.git
+     ```
+
+2. Copy the `drupal_vcard` folder into your Drupal site's `modules/custom/` directory.
+
+3. Enable the module in Drupal admin or via Drush:
+
+     ```bash
+     drush en drupal_vcard
+     ```
 
 ## Usage Example
 
