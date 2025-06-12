@@ -3,6 +3,10 @@
   "description": "Drupal 11+ module to generate vCards.",
   "type": "drupal-module",
   "license": "MIT",
+  "homepage": "https://www.drupal.org/project/vcard_generator",
+  "support": {
+    "source": "https://git.drupalcode.org/project/vcard_generator"
+  },
   "authors": [
     {
       "name": "Rumen Damyanov",
@@ -21,12 +25,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Drupal\\drupal_vcard_generator\\": "src/"
+      "Drupal\\vcard_generator\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Drupal\\drupal_vcard_generator\\Tests\\": "tests/"
+      "Drupal\\vcard_generator\\Tests\\": "tests/"
     }
   },
   "minimum-stability": "stable",

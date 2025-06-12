@@ -1,11 +1,14 @@
 <?php
 
-namespace Drupal\drupal_vcard_generator;
+namespace Drupal\vcard_generator;
 
 use Rumenx\PhpVcard\VCard;
 
 /**
  * Service for generating vCards.
+ *
+ * @category Service
+ * @package Drupalvcard_Generator
  */
 class VCardGenerator {
 
@@ -13,9 +16,17 @@ class VCardGenerator {
    * Create a vCard string from an array of data.
    *
    * @param array $data
-   *   Associative array with vCard fields (first_name, last_name, email, etc).
-   *   Supported keys: first_name, last_name, email, phone, address,
-   *   organization, department, title, url.
+   *   An associative array of data to be included in the vCard.
+   *   Supported keys:
+   *   - first_name: string, the first name.
+   *   - last_name: string, the last name.
+   *   - email: string, the email address.
+   *   - phone: string, the phone number.
+   *   - address: array, with keys 'street', 'city', 'state', 'zip', 'country'.
+   *   - organization: string, the organization name.
+   *   - department: string, the department name.
+   *   - title: string, the job title.
+   *   - url: string, a website URL.
    *
    * @return string
    *   The vCard string.
@@ -40,18 +51,18 @@ class VCardGenerator {
     if (!empty($data['address'])) {
       $address = $data['address'];
       $vcard->addAddress(
-        $address['street'] ?? '',
-        $address['city'] ?? '',
-        $address['state'] ?? '',
-        $address['zip'] ?? '',
-        $address['country'] ?? ''
-      );
+            $address['street'] ?? '',
+            $address['city'] ?? '',
+            $address['state'] ?? '',
+            $address['zip'] ?? '',
+            $address['country'] ?? ''
+                );
     }
     if (!empty($data['organization'])) {
       $vcard->addOrganization(
-        $data['organization'],
-        $data['department'] ?? NULL
-      );
+            $data['organization'],
+            $data['department'] ?? NULL
+                );
     }
     if (!empty($data['title'])) {
       $vcard->addTitle($data['title']);

@@ -11,6 +11,33 @@
 
 ## Installation
 
+### Drupal.org Installation (Recommended)
+
+You can install the module from Drupal.org either manually or using Composer:
+
+#### Option 1: Composer (Recommended)
+
+```bash
+composer require drupal/vcard_generator
+```
+
+Enable the module in Drupal admin or via Drush:
+
+```bash
+drush en vcard_generator
+```
+
+#### Option 2: Manual Installation
+
+1. Download from Drupal.org:
+   - [https://www.drupal.org/project/vcard_generator](https://www.drupal.org/project/vcard_generator)
+   - Git: `git clone https://git.drupalcode.org/project/vcard_generator.git`
+2. Copy the `vcard_generator` folder into your Drupal site's `modules/custom/` directory.
+3. Enable the module:
+   ```bash
+   drush en vcard_generator
+   ```
+
 ### Composer (Packagist)
 
 ```bash
@@ -40,34 +67,7 @@ drush en drupal_vcard_generator
      drush en drupal_vcard_generator
      ```
 
-### Drupal.org Installation (Recommended)
-
-You can install the module from Drupal.org either manually or using Composer:
-
-#### Option 1: Composer (Recommended)
-
-```bash
-composer require drupal/vcard_generator
-```
-
-Enable the module in Drupal admin or via Drush:
-
-```bash
-drush en vcard_generator
-```
-
-#### Option 2: Manual Installation
-
-1. Download from Drupal.org:
-   - [https://www.drupal.org/project/vcard_generator](https://www.drupal.org/project/vcard_generator)
-   - Git: `git clone https://git.drupalcode.org/project/vcard_generator.git`
-2. Copy the `vcard_generator` folder into your Drupal site's `modules/custom/` directory.
-3. Enable the module:
-   ```bash
-   drush en vcard_generator
-   ```
-
-## Usage Example
+### Usage Example
 
 ```php
 /** @var \Drupal\drupal_vcard_generator\VCardGenerator $generator */
@@ -141,6 +141,21 @@ composer lint
 composer test
 ```
 
+## Note on Namespaces and Composer Package
+
+- **Drupal.org:**
+  - Composer package: `drupal/vcard_generator`
+  - Namespace: `Drupal\vcard_generator`
+  - Service name: `vcard_generator.generator`
+  - Info/Services YAML: `vcard_generator.info.yml`, `vcard_generator.services.yml`
+- **Packagist/GitHub:**
+  - Composer package: `rumenx/drupal_vcard_generator`
+  - Namespace: `Drupal\drupal_vcard_generator`
+  - Service name: `drupal_vcard_generator.generator`
+  - Info/Services YAML: `drupal_vcard_generator.info.yml`, `drupal_vcard_generator.services.yml`
+
+If you need to switch between the two, update the namespace in your PHP files and the `composer.json` autoload section accordingly. The codebase and service names must match the installation method.
+
 ## License
 
-MIT. See [LICENSE.md](LICENSE.md).
+[MIT License](LICENSE.md)

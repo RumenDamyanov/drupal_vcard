@@ -1,7 +1,0 @@
-# This file is for backward compatibility. For Drupal.org, use vcard_generator.info.yml.
-
-name: 'Drupal vCard'
-type: module
-description: 'Provides vCard generation.'
-core_version_requirement: '^11'
-package: 'Other'

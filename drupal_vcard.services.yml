@@ -1,5 +1,0 @@
-# This file is for backward compatibility. For Drupal.org, use vcard_generator.services.yml.
-
-services:
-  drupal_vcard.generator:
-    class: 'Drupal\\drupal_vcard\\VCardGenerator'
