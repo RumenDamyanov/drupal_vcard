@@ -1,5 +1,5 @@
 {
-  "name": "rumenx/drupal_vcard_generator",
+  "name": "drupal/vcard_generator",
   "description": "Drupal 11+ module to generate vCards.",
   "type": "drupal-module",
   "license": "MIT",
