@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\drupal_vcard;
+namespace Drupal\drupal_vcard_generator;
 
 use Rumenx\PhpVcard\VCard;
 
@@ -14,6 +14,8 @@ class VCardGenerator {
    *
    * @param array $data
    *   Associative array with vCard fields (first_name, last_name, email, etc).
+   *   Supported keys: first_name, last_name, email, phone, address,
+   *   organization, department, title, url.
    *
    * @return string
    *   The vCard string.
@@ -38,15 +40,18 @@ class VCardGenerator {
     if (!empty($data['address'])) {
       $address = $data['address'];
       $vcard->addAddress(
-            $address['street'] ?? '',
-            $address['city'] ?? '',
-            $address['state'] ?? '',
-            $address['zip'] ?? '',
-            $address['country'] ?? ''
-        );
+        $address['street'] ?? '',
+        $address['city'] ?? '',
+        $address['state'] ?? '',
+        $address['zip'] ?? '',
+        $address['country'] ?? ''
+      );
     }
     if (!empty($data['organization'])) {
-      $vcard->addOrganization($data['organization'], $data['department'] ?? NULL);
+      $vcard->addOrganization(
+        $data['organization'],
+        $data['department'] ?? NULL
+      );
     }
     if (!empty($data['title'])) {
       $vcard->addTitle($data['title']);

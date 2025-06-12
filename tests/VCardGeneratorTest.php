@@ -2,9 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Drupal\drupal_vcard\Tests;
+// For Packagist/GitHub:
+namespace Drupal\drupal_vcard_generator\Tests;
+// For Drupal.org, use:
+// namespace Drupal\vcard_generator\Tests;
 
-use Drupal\drupal_vcard\VCardGenerator;
+use Drupal\drupal_vcard_generator\VCardGenerator;
 use PHPUnit\Framework\TestCase;
 
 class VCardGeneratorTest extends TestCase {

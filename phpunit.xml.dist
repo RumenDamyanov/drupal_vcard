@@ -4,7 +4,7 @@
          verbose="true"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="drupal_vcard Unit Tests">
+        <testsuite name="drupal_vcard_generator Unit Tests">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>

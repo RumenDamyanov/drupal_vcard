@@ -1,5 +1,5 @@
 {
-  "name": "rumenx/drupal_vcard",
+  "name": "rumenx/drupal_vcard_generator",
   "description": "Drupal 11+ module to generate vCards.",
   "type": "drupal-module",
   "license": "MIT",
@@ -21,12 +21,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Drupal\\drupal_vcard\\": "src/"
+      "Drupal\\drupal_vcard_generator\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Drupal\\drupal_vcard\\Tests\\": "tests/"
+      "Drupal\\drupal_vcard_generator\\Tests\\": "tests/"
     }
   },
   "minimum-stability": "stable",
